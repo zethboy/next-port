@@ -13,9 +13,9 @@ const StarBackground = (props: any) => {
   random.inSphere(new Float32Array(5000), {radius: 1.2 })
   )
 
-  useFrame((staate, delta)=> {
-    ref.current.rotaion.x -= delta/10;
-    ref.current.rotaion.y -= delta/15;
+  useFrame((state, delta)=> {
+    ref.current.rotation.x -= delta/10;
+    ref.current.rotation.y -= delta/15;
   })
   return (
     <group rotation={[0, 0, Math.PI /4]}>
@@ -36,9 +36,9 @@ const StarBackground = (props: any) => {
   )
 }
 
-const StartCanvas = () => (
+const StarsCanvas = () => (
   <div className="w-full h-auto fixed inset-0 z-[20]">
-    <Canvas>
+    <Canvas camera={{position: [0, 0, 1]}}>
       <Suspense fallback={null}>
         <StarBackground />
       </Suspense>
@@ -47,4 +47,4 @@ const StartCanvas = () => (
 
 )
 
-export default StarBackground
+export default StarsCanvas
