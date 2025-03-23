@@ -11,7 +11,8 @@ const StarBackground = (props: any) => {
   const ref: any = useRef(null);
   const [sphere] = useState(()=>
   random.inSphere(new Float32Array(5000), {radius: 1.2 })
-  )
+    
+)
 
   useFrame((state, delta)=> {
     ref.current.rotation.x -= delta/10;
@@ -21,7 +22,7 @@ const StarBackground = (props: any) => {
     <group rotation={[0, 0, Math.PI /4]}>
       <Points 
       ref={ref}
-      positions={sphere}
+      positions={new Float32Array(sphere)}
       stride={3}
       frustumCulled 
       {...props}>
