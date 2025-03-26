@@ -35,7 +35,7 @@ const animationDelay = 0.3
       width = {width}
       height = {height}
       alt = "skill image" />
-        
+        <div>absen</div>
     
     </motion.div>
   )
