@@ -35,10 +35,7 @@ const animationDelay = 0.3
       width = {width}
       height = {height}
       alt = "skill image" />
-        <div className='flex flex-wrap'>
-
-        </div>
-    
+        
     </motion.div>
   )
 }
